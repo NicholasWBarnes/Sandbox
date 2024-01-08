@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://yii7lcshtile"]
+
+[ext_resource type="Texture2D" uid="uid://cf5yuqyfcladb" path="res://Assets/Sprites/Landscape/WhiteSquare.png" id="1_oycwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wqlp"]
+size = Vector2(3640, 848)
+
+[node name="GreenSquare" type="StaticBody2D"]
+modulate = Color(0.231373, 0.529412, 0.290196, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_7wqlp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 1)
+texture = ExtResource("1_oycwq")

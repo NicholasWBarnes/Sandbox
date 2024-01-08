@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1upw2x0n1440"]
+[gd_scene load_steps=4 format=3 uid="uid://c1upw2x0n1440"]
 
 [ext_resource type="Script" path="res://Scenes/level_parent.gd" id="1_kw2lp"]
+[ext_resource type="PackedScene" uid="uid://bcq3jl2g1ab4y" path="res://Scenes/player.tscn" id="2_173cb"]
+[ext_resource type="PackedScene" uid="uid://yii7lcshtile" path="res://Scenes/Landscapes/green_square.tscn" id="3_8lllb"]
 
 [node name="LevelParent" type="Node2D"]
 script = ExtResource("1_kw2lp")
+
+[node name="Player" parent="." instance=ExtResource("2_173cb")]
+position = Vector2(522, -123)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="GreenSquare" parent="." instance=ExtResource("3_8lllb")]
+position = Vector2(597, 743)
